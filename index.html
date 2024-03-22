@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Caixa</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        <label for="nmCliente">Nome</label>
+        <input type="text" name="nmCliente" id="nmCliente">
+        <div class="produtos">
+            <div class="produto">
+                <label for="nmProduto1">Produto 01</label>
+                <input type="text" name="nmProduto1" id="nmProduto1">
+                <label for="vlProduto1">Valor Produto 01</label>
+                <input type="number" name="vlProduto1" id="vlProduto1">
+            </div>
+            <div class="produto">
+                <label for="nmCliente">Produto 02</label>
+                <input type="text" name="nmProduto2" id="nmProduto2">
+                <label for="vlProduto2">Valor Produto 02</label>
+                <input type="number" name="vlProduto2" id="vlProduto2">
+            </div>
+        </div>
+        <label for="vlPago">Valor Pago</label>
+        <input type="number" name="vlPago" id="vlPago">
+        <input type="submit" value="Efetuar Pedido">
+    </form>
+</body>
+</html>
