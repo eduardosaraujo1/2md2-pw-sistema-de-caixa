@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota Fiscal</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: steelblue;
+    }
+    fieldset {
+        font-size: 1.2rem;
+    }
+    </style>
 </head>
 <body>
 <h1>Nota Fiscal</h1>
@@ -28,15 +37,15 @@ if ($produtosValidos) {
 
 if ($produtosValidos and $vlPagoValido) {
     $troco = (double)$vlPago - (double)$vlGasto;
-    $corValor = $vlPago - $vlGasto < 0 ? "red" : "black";
+    $corValor = $vlPago - $vlGasto < 0 ? "yellow" : "black";
 }
 
 $vlGastoFormatado = number_format((double)$vlGasto, 2, ',', '');
 $trocoFormatado = number_format((double)$troco, 2, ',', '');
 
-echo "<div class=\"nmCliente\">Nome do Cliente: $nmCliente</div>";
-echo "<div class=\"nmCliente\">Valor Gasto: R$$vlGastoFormatado</div>";
-echo "<div class=\"nmCliente\" style=\"color: $corValor\">Troco: R$$trocoFormatado</div>";
+echo "<fieldset>Nome do Cliente: <b>$nmCliente</b></fieldset> <br>";
+echo "<fieldset>Valor Gasto: <b>R$$vlGastoFormatado</b></fieldset> <br>";
+echo "<fieldset style=\"color: $corValor\">Troco: <b>R$$trocoFormatado</b></fieldset> <br>";
 ?>
 </body>
 </html>
